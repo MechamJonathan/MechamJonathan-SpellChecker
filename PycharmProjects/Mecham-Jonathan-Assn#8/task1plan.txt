@@ -1,0 +1,28 @@
+1. Requirement specs
+    program will test a number if it is a perfect number
+    outputs 4 perfect numbers and system runtime
+
+2. System analysis
+    system needs to calculate factors of a number
+    and the sum of those factors
+
+3. System Design
+
+perfect # found = 0
+
+for x in range (2,10000)
+    sum = 0
+    for i in range (1, 1/2)
+        if x % i == 0
+            factor = i
+            sum += factor
+
+        if sum == x:
+            print x
+            perfect # +1
+
+if perfect# = 4 :
+    break
+
+print count
+

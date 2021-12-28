@@ -1,0 +1,40 @@
+
+1. inputs:
+    employee's work info
+    state and federal tax deductions
+
+    output:
+    employee's net pay
+
+2. system needs to compute worker's pay
+
+3. - take following inputs from user
+    employees' name
+    hours worked in a week
+    hourly pay rate
+    federal tax withholding
+    state tax withholding rate
+
+-   calculate outputs
+    grossPay = hoursWorked * hourlyRate
+    fedDeduction = grossPay * federalTax
+    staDeduction = grossPay * stateTax
+    totalDeduction = fedDeduction + staDeduction
+    netPay = grossPay - totalDeduction
+
+-   print outputs:
+    pay
+    hours worked
+    hourly rate
+    gross pay
+
+    deductions
+    state deduction
+    state deduction
+    total deduction
+
+    net pay
+
+-   format outputs
+
+

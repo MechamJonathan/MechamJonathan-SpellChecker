@@ -1,0 +1,39 @@
+
+private data
+    make data invisible to outside of the object
+    python - *private
+
+
+setter methods
+    way to modify class member data
+    gives us control over values
+    aka:mutator method
+    naming
+        set <propertyName>(self, propertyvalue)
+        setRadius
+
+getter method
+    way to access class member data
+    aka: accessor method
+    naming
+        get <propertyName>(self):
+            return self. <propertyName>
+
+Class Abstraction and Encapsulation
+    seperate class implementation and use of a class
+    details of implementation are hidden from the user
+    user knows input and results, but nothing in between (processing)
+
+    Class contract
+        the way a class/object should/can be used
+        Application Programming Interface - API
+
+Object Oriencted Thinking
+    Procedural Programming
+        focus on functions
+        data and functions are seperate
+    Object Oriented Programming
+        Focus on objects and operations on objects
+        Couple data and methods (functions)
+        Information and behavior in a single entity
+

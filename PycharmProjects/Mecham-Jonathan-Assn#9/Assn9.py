@@ -1,0 +1,6 @@
+
+from chessboard import *
+
+main()
+
+

@@ -1,0 +1,188 @@
+
+1. Requirement Specs
+
+create deck of cards
+search and sort
+perform the following tasks as inputed by user
+ -  sort by value
+ -  sort by id
+ -  find card
+ -  new hand
+ -  quit
+
+
+2. System analysis
+-   compute the values of the cards
+-
+
+
+
+3. Pseudo Code
+
+CARD
+---------------------
+rank: string
+mano: sting
+coin: string
+----------------------
+getRank: string
+getCoin: string
+getMano: string
+
+
+
+DECK
+----------------------
+Card
+----------------------
+Shuffle: strings
+draw: string
+
+
+
+
+
+
+class Card:
+    def __init__(self, value):
+        self.__value = value
+        self.__Ranks = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+        self.__coin = ["heads", "tails"]
+        self.__mano = ["rock", "paper", "scissors"]
+
+
+    def getRank(self):
+        return self.__Ranks[self.__value % 20]
+
+    def getCoin(self):
+        return self.__coin[self.__value // 20]
+
+    def getMano(self):
+        return self.__mano[self.__value // 20]
+
+    def getCardValue(self):
+        return self.__value % 20 + 1
+
+    def getDeckValue(self):
+        return self.__value
+
+    def __str__(self):
+        return self.getRank() +  " of " + self.getMano() + " " + self.getCoin()
+
+    def __repr__(self):
+        return self.__str__()
+
+
+
+class Deck:
+    def __init__(self):
+        self.shuffle()
+
+    def shuffle(self):
+        self.__deck = []
+        for i in range(30):
+            self.__deck.append(Card(i))
+        random.shuffle(self.__deck)
+
+    def draw(self):
+        return self.__deck.pop
+
+
+def binary_search(input_list, key):
+    print(input_list)
+    low = 0
+    high = len(input_list) - 1
+    while high >= low:
+        print(low, high)
+        mid = (high + low) // 2
+        if key == input_list[mid]:
+            return mid
+        elif key < input_list[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
+
+    return -1
+
+
+def selectionSort(inputList):
+    for i in range(len(inputList) - 1):
+        currMinIndex = i
+
+        for j in range(i + 1, len(inputList)):
+            if inputList[currMinIndex] > inputList[j]:
+                currMinIndex = j
+
+        if currMinIndex != i:
+            inputList[i], inputList[currMinIndex] = inputList[currMinIndex], inputList[i]
+
+
+def main():
+    deck = Deck()
+
+    playerHand = []
+
+    for i in range(30):
+        playerHand.append(deck.draw())
+
+    for j in playerHand:
+        print(j)
+
+
+
+    print('''
+    1) sort by value
+    2) sort by id
+    3) find card
+    4) new hand
+    5) quit
+    ''')
+    menu = eval(input("make a selection:"))
+
+    if menu == 1:
+        selectionSort(playerHand)
+        for card in playerHand:
+            print(card)
+
+
+    if menu == 2:
+        return
+
+    if menu == 3:
+        valueKey = eval(input("enter card value to search for:"))
+        coinKey = eval(input('''enter coin to search for:
+        1) heads
+        2) tails'''))
+        manoKey = eval(input('''enter mano to search for:
+        1) Rock
+        2) Paper
+        3) Scissors'''))
+
+        valueResult = binary_search(playerHand, valueKey)
+        coinResult = binary_search(playerHand, coinKey)
+        manoResult = binary_search(playerHand, manoKey)
+
+
+        if valueResult and coinResult and manoResult == -1:
+            print("Did not find card")
+        else:
+            print("The card is in your hand!")
+
+
+
+    if menu == 4:
+        for i in playerHand:
+            playerHand.pop()
+
+        for i in range(30):
+                playerHand.append(deck.draw())
+
+        for j in playerHand:
+                print(j)
+
+
+    if menu == 5:
+        print("thanks for playing!")
+        sys.exit()
+
+

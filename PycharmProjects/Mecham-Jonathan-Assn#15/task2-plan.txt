@@ -1,0 +1,145 @@
+
+
+
+1. required specs
+
+-   prompt for number of players (1-5)
+-   each player starts with $100
+-   player can continue until out of money
+-   each round:
+    -   prompt each player for bet amount
+        display current balance
+        bet must be $5 unless their balance is lower
+    -   Deal the cards
+        -   each round will have fresh shuffled deck
+        -   cards dealt 1 at a time(start player 1, end with dealer)
+        -   each player gets 2 cards
+        -   after dealing cards, display the dealers second card
+    -   For each player:
+        -   show player hand
+        -   ask the player to hit(take another card) or hold
+        -   repeat until they hold or bust (total of cards is over 21)
+        -   if they bust they lose
+        -   if player holds, next player goes
+    -   When the round is done:
+        -   display both dealer cards (print each on a new line)
+        -   use time.sleep() to wait for 1 second before dealing another card to dealer
+        -   dealer MUST take card until its total is 17 or higher
+        -   if dealers initial hand is 17 or higher it doesn't take a card
+        -   use messages so players know what the dealer is doing
+            (The dealer takes a card/ the dealer busts / the dealer holds)
+    -   Winners
+        -   if dealer busts, all players who didnt bust win
+        -   if the player and dealer totals are the same they tie
+        -   if the players hand is lower than the dealer, the player loses
+        -   message the results to the player
+    - player payouts
+        -   Win- add equivalent amount to player's balance
+        -   Tie - do nothing
+        -   Lose- subtract bet amount from players balance
+        -   Display each user's balance(includeing those who have $0)
+    - ask to play again
+        -   yes:repeat with reset balance
+        -   no: thanks for playing
+             list score rank (highest balance first)
+
+
+
+2.
+-   Needs to locate objects and a list and perform varieous functions on them.
+-   keep track of objects in a list(locations and such)
+-   loops or counts to run through each player
+
+
+
+
+
+
+
+
+
+3)
+
+START
+players = []
+balance = 100
+
+numPlayers = how many players? (1-5)
+for i in range (numPlayers - 1)
+players.append([])
+
+for j in players:
+    players[i].append(balance)
+
+
+ROUNDS
+count = 0
+for i in range(numPlayers)
+    print(player[count]"'s turn
+        current account balance:", players[count][2])
+    bet = eval(input("how much would you like to bet"))
+
+DEAL CARDS
+count = 0
+for i in range(numPlayers)
+    for i in range(1)
+        playerHand = []
+        players[count].append(playerhand)
+        for i in range(1)
+        players[count][3].append(d.draw)
+
+
+players turns
+if hit
+    player[i]. append card
+    if players cards go over 21:
+        bust
+
+
+
+if dealers hand > 21 but players is < 21
+    player wins
+        add winning bet money
+if players hand is > 21:
+    player busts
+        subtract bet money
+
+if dealer hand == players hand
+    tie
+
+
+if players hand < 21 and dealers hand< 21 but dealer's hand > players hand:
+    player loses
+        subtract money
+invers of that ^^
+    player wins
+        add winning money
+
+print each players name and their balance
+
+loop:
+Would you like to play again?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

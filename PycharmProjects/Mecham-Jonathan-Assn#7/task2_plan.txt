@@ -1,0 +1,27 @@
+1. Requirement specs
+-   user inputs the center (x,y) coordinates and radii of two circles
+    outputs if circle 2 is inside, overlapping, or outside of circle 1
+
+2. System analysis
+    System needs to calculate distance between two center points
+    System needs to calculate absolute value of radius 1 - radius 2 and if distance is <= that
+    System needs to calculate radius 1 + radius 2 and if distance is <= that
+
+
+3. Psuedo Code
+take center X,Y coordinates and radius for circle 1
+take center X,Y coordinates and radius for circle 2
+
+import math
+calculate distance between center points
+
+sqrt((x2 -x1)^2 + (y2-y1)^2 )
+
+if distance between center points <= abs(radius1 - radius2)
+    then circle 2 is inside of circle 1
+
+if distance between center points <= radius1 + radius2
+    then circle 2 overlaps
+
+else
+    circle 2 does not overlap

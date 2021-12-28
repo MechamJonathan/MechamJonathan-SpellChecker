@@ -1,0 +1,211 @@
+# Jonathan Mecham
+# A01854679
+# CS 1400- 002
+# Assn. 4 Turtle drawing a snowman
+
+import turtle
+
+turtle.showturtle ()
+turtle.speed (20)
+
+# snowman head
+turtle.circle (-50)
+
+
+turtle.penup ()
+turtle.right (90)
+turtle.forward (30)
+turtle.right (90)
+turtle.forward (30)
+turtle.pendown ()
+
+#face (left eye)
+turtle.begin_fill ()
+turtle.fillcolor ("black")
+turtle.circle (10)
+turtle.end_fill ()
+
+turtle.penup ()
+turtle.back(45)
+turtle.pendown ()
+
+
+#face (right eye)
+turtle.begin_fill ()
+turtle.circle (10)
+turtle.end_fill ()
+
+turtle.penup ()
+turtle.forward (30)
+turtle.left (90)
+turtle.forward (25)
+
+#face (nose)
+turtle.right(90)
+turtle.color ("orange")
+turtle.stamp ()
+turtle.forward (5)
+turtle.stamp ()
+turtle.forward (5)
+turtle.stamp ()
+turtle.forward (5)
+turtle.stamp ()
+turtle.forward (5)
+turtle.stamp()
+turtle.back (20)
+
+turtle.forward(10)
+turtle.left (90)
+turtle.forward(20)
+turtle.left (90)
+turtle.color ("black")
+
+#face (mouth)
+turtle.pendown ()
+turtle.width (6)
+turtle.forward (40)
+
+#hat
+turtle.penup ()
+turtle.goto (0,-17)
+turtle.pendown ()
+turtle.begin_fill ()
+turtle.color ("blue")
+turtle.forward (40)
+turtle.left (90)
+turtle.circle (40,180)
+turtle.left (90)
+turtle.forward (40)
+turtle.end_fill ()
+
+turtle.penup ()
+turtle.forward (40)
+turtle.left (90)
+turtle.forward (20)
+turtle.left (90)
+turtle.color ("maroon")
+
+#hat design
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+
+turtle.left(90)
+turtle.forward (10)
+turtle.left (90)
+
+turtle.color ("tan")
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+turtle.forward (15)
+turtle.stamp ()
+
+turtle.goto (0,-100)
+
+#chest
+turtle.color("black")
+turtle.width (1)
+turtle.pendown ()
+turtle.left (180)
+turtle.circle (60)
+
+#scarf
+turtle.color ("maroon")
+turtle.begin_fill ()
+turtle.forward (25)
+turtle.circle (10,180)
+turtle.forward (50)
+turtle.circle (10,180)
+turtle.forward (50)
+turtle.end_fill ()
+turtle.begin_fill ()
+turtle.left (90)
+turtle.forward (60)
+turtle.left (90)
+turtle.forward (20)
+turtle.left (90)
+turtle.forward (60)
+turtle.left (90)
+turtle.forward (25)
+turtle.end_fill()
+turtle.penup ()
+
+#buttons
+
+turtle.color ("black")
+turtle.goto (0,-130)
+turtle.pendown ()
+turtle.begin_fill ()
+turtle.circle (5)
+turtle.end_fill ()
+turtle.penup ()
+
+turtle.color ("black")
+turtle.goto (0,-150)
+turtle.pendown ()
+turtle.begin_fill ()
+turtle.circle (5)
+turtle.end_fill ()
+turtle.penup ()
+
+turtle.color ("black")
+turtle.goto (0,-170)
+turtle.pendown ()
+turtle.begin_fill ()
+turtle.circle (5)
+turtle.end_fill ()
+turtle.penup ()
+
+#left arm
+turtle.goto (-60,-150)
+turtle.color ("yellow")
+turtle.width (7)
+turtle.pendown ()
+turtle.forward (55)
+turtle.back (15)
+turtle.right (45)
+turtle.forward(15)
+turtle.back (15)
+turtle.left (90)
+turtle.forward (15)
+turtle.penup ()
+
+#right arm
+turtle.goto (60,-145)
+turtle.left (135)
+turtle.pendown ()
+turtle.forward (55)
+turtle.back (15)
+turtle.right (45)
+turtle.forward(15)
+turtle.back (15)
+turtle.left (90)
+turtle.forward (15)
+turtle.penup ()
+
+#bottom
+turtle.goto (0,-220)
+turtle.pendown ()
+turtle.color ("black")
+turtle.width (1)
+turtle.left (135)
+turtle.circle (80)
+
+
+
+
+turtle.done ()

@@ -1,0 +1,28 @@
+
+
+Deck of cards
+-	52 cards
+-	Suit – cardNum // 13 -> 0 – 3
+-	Rank – cardNum % 13 -> 0 – 12
+
+Uml
+Deck
+----- ------
+Deck – list: card
+-------------
+Suit – list
+Rank- list
+-------- -------
+Shuffle – None
+Draw(): card
+
+
+Card
+------- -----
+value: int
+suit: list
+rank: list
+-------------
+getRank: string
+getsuit: string
+getValue: int

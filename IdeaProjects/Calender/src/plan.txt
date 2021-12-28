@@ -1,0 +1,16 @@
+step 1:
+-   obtain user input
+-   print month
+
+step 2: print month
+-   print month header
+-   print month body
+
+step 3: month body
+-   determine day of the week start
+-   how many days are in the month
+-   print days of the month
+
+step 4: print days of the month
+-   print empty space
+-   print days of the week

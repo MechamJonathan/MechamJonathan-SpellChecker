@@ -1,0 +1,103 @@
+Jonathan Mecham
+Assn12 Task2 plan
+
+
+
+
+1. Requirement Specs
+input: user's password
+output: if the password meets certain conditions, it is valid
+
+
+2. System Analysis
+ password must have at least 8 digits
+ password must consist of only letters and digits
+ password must contain at least 2 digits
+ password cannot end in 123
+ password cannot contain password
+
+3. System Design
+
+UML Diagram
+
+Password
+------------------------
+isLength(): boolean
+isTwoDigits(): boolean
+isEnding123(): boolean
+isPassword(): boolean
+isAlphaNum(): boolean
+isValid(): boolean
+password: string
+
+class Password:
+
+    def __init__(self, password = "password"):
+        self.string = password
+
+    def getString(self):
+        return self
+
+    def setString(self, password):
+        self.string = password
+
+    #checks passwords length
+    def __islength(self,password):
+        if len(password) > 8:
+            return True
+
+    #checks if password has atleast two digits
+    def __isTwoDigits(self,password):
+        if not len([x for x in password if x.isdigit()]) < 2:
+            return True
+
+    #checks if password ends in 123
+    def __isEnding123(self, password):
+        if not "123" in password:
+            return True
+
+    #checks if password is in password
+    def __isPassword(self,password):
+        if not "password" in password:
+            return True
+
+    #checks if password only has letters and numbers
+    def __isAlphaNum(self, password):
+        if password.isalnum():
+            return True
+
+    #runs through each test to validate password
+    def isValid(self, password):
+        if Password.__islength(self, password):
+            if Password.__isTwoDigits(self, password):
+                if Password.__isEnding123(self, password):
+                    if Password.__isPassword(self, password):
+                        if Password.__isAlphaNum(self, password):
+                            print("Password is valid")
+
+    # if password is invalid, this prints the reasons why
+    def getErrorMessage(self, password):
+        if not Password.__islength(self, password):
+            print("password must be 8 characters long")
+        if not Password.__isTwoDigits(self, password):
+            print("password must contain atleast two digits")
+        if not Password.__isEnding123(self, password):
+            print ("password cannot end in 123")
+        if not Password.__isPassword(self, password):
+            print ("password cannot have the word password in it")
+        if not Password.__isAlphaNum(self, password):
+            print ("password must ONLY contain letters and digits")
+
+
+def main():
+    p = Password()
+    runAgain = "Y"
+
+    while runAgain == "Y":
+        password = input("Enter a password:")
+        p.setString(password)
+        p.isValid(password)
+        p.getErrorMessage(password)
+
+        print ("Would you like to test another password?")
+        runAgain = input("Enter Y or N:")

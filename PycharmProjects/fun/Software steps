@@ -1,0 +1,10 @@
+use the software design steps
+1. requirement specifications
+    what input do you have
+    what output do you want
+2. system analysis
+    determine what your system needs to compute
+3. system design
+    write psuedo code
+4. implementation
+    write the actual code

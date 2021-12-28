@@ -1,0 +1,13 @@
+1) requirement specs
+    - user enters two x,y points
+    - print distance between the two points, use abs() so its positive
+
+2) calculate the distance between the two points using distance formula
+
+3)
+input point x1,y1
+input point x2,y2
+
+import math
+distance = abs(sqrt(x2 - x1) ** 2 + (y2 - y1)**2))
+

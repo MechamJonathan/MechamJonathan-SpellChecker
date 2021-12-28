@@ -1,0 +1,49 @@
+
+
+// Write a method that creates and returns an array of integers
+// Generates number list
+    public static int[] generateNumbers(int howMany, int maxValue)
+
+    arrayList [] = []
+
+    int howMany = input
+    maxValue = input
+
+    for number in howMany:
+        num = math.random()
+        newNum = num * maxvalue
+        arrayList.append(newNum)
+
+
+// Checks if howMany is a valid array length
+// if howmany isn't valid int return null
+
+
+//linear search
+// searches for specific value, returns true or false
+
+    public static boolean linearSearch(int[] data, int search
+
+//binary search
+// searches for specific value, returns true or false
+
+    public static boolean binarySearch(int[] data, int search)
+
+// selection sort
+// returns numbers lowest to highest
+
+    public static void selectionSort(int[] data
+
+
+
+demoLinearSearchUnsorted()
+    while arrayIncrement < max value
+        linearSearch(generateNumbers(arrayIncrement))
+
+        print output
+
+        arrayIncrement += arrayIncrement
+
+
+
+

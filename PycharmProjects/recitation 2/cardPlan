@@ -1,0 +1,10 @@
+
+input credit card numbers
+multiply each digit by two
+
+def getDigits (number):
+    while number !=0:
+        print (number % 10) * 2)
+        number = number //10
+
+

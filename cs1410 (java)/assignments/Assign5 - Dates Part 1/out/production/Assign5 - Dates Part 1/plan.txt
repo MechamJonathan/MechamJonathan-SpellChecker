@@ -1,0 +1,41 @@
+
+Goal:
+Create a set of classes that are capable of managing and displaying dates by the
+gregorian and julian calender
+
+-   set date to current date
+
+
+-   Overloaded constructor that takes year, month,
+    and date values and sets the date to that date:
+    GregorianDate(int year, int month, int day)
+
+-   void addDays(int days)
+
+-   A method that subtracts a specified number of days to the date:
+    void subtractDays(int days)
+
+-   A method that returns true/false if the date is part of a leap year:
+    boolean isLeapYear()
+
+-   A method that prints the date (without a carriage return) in mm/dd/yyyy format:
+    void printShortDate()
+
+-   A method that prints the date (without a carriage return) in Monthname dd, yyyy format:
+    void printLongDate()
+
+-   The following 'get' accessor methods. These aren't used by the sample driver code, but would normally be part of a
+    class like this. These accessor methods are used by the unit tests.  Note the word "current" doesn't mean "today",
+    it means whatever the value is represented by the date, it is the "current value" of the date.
+    String getCurrentMonthName()
+    int getCurrentMonth()
+    int getCurrentYear()
+    int getCurrentDayOfMonth()
+
+-   Store the year, month, and day values as private instance (non-static) data members of the class.
+
+-   The two date classes must provide only the following private methods, which you'll use in support of the other
+    public instance methods:
+    A method that returns true/false if a a specified year is a leap year: boolean isLeapYear(int year)
+    A method that returns the number of days in a month (for a year): int getNumberOfDaysInMonth(int year, int month)
+    A method that returns the name of a month; first letter capitalized, remainder lowercase: String getMonthName(int month)

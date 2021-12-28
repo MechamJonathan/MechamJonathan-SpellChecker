@@ -1,0 +1,58 @@
+1. Requirement Specs
+-   user inputs rock, paper, or scissors.
+    computer outputs if user won or computer won
+
+2. System analysis
+-   System needs to take user's input
+    Randomly, computer generates an input and challenges the user's
+    Outputs who won
+
+3. System Design (psuedo code)
+
+import random
+
+asks for player's hand (rock 1, paper 2, or scissors 0)
+    players input = hand
+    computer's input == random (0,2) = comp_hand
+
+
+define function x (hand, comp_hand)
+    if x = 0
+        return scissor
+    if x = 1
+        return rock
+    if x = 2
+        return paper
+
+-conditional statements-
+if comp_hand == hand
+    Draw
+else comp_hand == hand + 1
+    print Computer wins
+else comp hand == hand -2
+    print computer wins
+else comp_hand == hand - 1
+    print user wins
+else comp_hand == + 2
+    print user wins
+
+
+-logical statements-
+computer wins
+   if comp_hand == 1 and hand == 0
+   or comp_hand == 2 and hand == 1
+   or comp_hand == 0 and hand == 2
+        print computer wins
+
+user wins
+   if comp_hand == 0 and hand == 1
+   or comp_hand == 1 and hand == 2
+   or comp_hand == 2 and hand == 0
+        print user wins
+
+draws
+   if comp_hand == 0 and hand == 0
+   or comp_hand == 1 and hand == 1
+   or comp_hand == 2 and hand == 2
+        print draw
+
